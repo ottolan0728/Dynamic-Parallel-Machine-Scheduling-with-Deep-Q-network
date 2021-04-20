@@ -2,7 +2,7 @@
 
 ## Code
 
-``"env_batch.py`` - The code of DQN environment | <strong> State Reward Action </strong>
+``env_batch.py`` - The code of DQN environment | <strong> State Reward Action </strong>
 
     *There are no parameters to be modified in this file. The generation of states, job assignments, and calculation of rewards are all included in the operation of this file.
 
@@ -16,7 +16,7 @@
 
 ``util.py`` - The code of other functions
 
-    ®‰•Lcode∑|•Œ®Ï™∫Function¥X•Gêmºg¶b∏Ã≠±°Aπ≥¨Oenv_batch≠p∫‚®∫®«job¨Oactive™∫¥N¶b¶π¿…Æ◊§§º∂ºg°C
+    All the functions used by other codes are written in this file. For example, ``env_batch`` calculates which jobs that are active, and is encoded in this file.
 
 ``plot.py`` - µeµ≤™G™∫πœcode
 
