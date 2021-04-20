@@ -2,49 +2,49 @@
 
 ## Code
 
-``env_batch.py`` - The code of DQN environment | <strong> State Reward Action </strong>
+``"env_batch.py`` - The code of DQN environment | <strong> State Reward Action </strong>
 
     *There are no parameters to be modified in this file. The generation of states, job assignments, and calculation of rewards are all included in the operation of this file.
 
-``net_batch.py`` - DQNç¶²è·¯code | <strong> Agent </strong>
+``net_batch.py`` - The code of DQN network | <strong> Agent </strong>
 
-    *æ­¤æª”æ¡ˆæœ‰actorè·Ÿcriticå…©å€‹Functionï¼Œä¸»è¦ä½¿ç”¨Criticçš„ç¶²è·¯ï¼Œä»£è¡¨onlineèˆ‡target networkå…©î¼ï¼Œç›®å‰ä»¥convolutional layerå»ºæ§‹
+    *There are two functions in this file, including Actor network and Critic network. It mainly uses Critic network, which means that Online and Target networks are currently constructed with convolutional layers.
 
-``DQN.py`` - DQN optimize code | <strong> Agent Optimize </strong>
+``DQN.py`` - The code of DQN optimization | <strong> Agent Optimization </strong>
 
-    æ­¤æª”æ¡ˆä¸»è¦æ˜¯é‹ä½œoptimizedçš„äº‹æƒ…ï¼Œagentæ¯èˆ‡ä¸€å€‹instanceäº’å‹•å®Œå¾Œ(æŒ‡æ´¾å®Œå…¨éƒ¨å·¥ä½œ)æœƒåŸ·è¡Œoptimizeæ˜¯åœ¨æ­¤æª”æ¡ˆä¸­é€²è¡Œï¼Œè¦èª¿æ•´çš„åƒæ•¸ç‚º``early stopping``å…§çš„åƒæ•¸ï¼Œä»¥åŠ134è¡Œçš„stepæ¬¡æ•¸ï¼Œä¹Ÿå°±æ˜¯å¤šå°‘epochè¦æ›´æ–°ä¸€æ¬¡target
+    This file is to optimize DQN agents. After the agent interacts with an instance (finished assigning all jobs), the optimization of the agent is executed in this file. The parameters to be adjusted are the parameters in ``early stopping'', and 134 The number of steps in the row, that is, how many epochs to update the target
 
-``util.py`` - ä¸€äº›function code
+``util.py`` - The code of other functions
 
-    å…¶ä»–codeæœƒç”¨åˆ°çš„Functionå¹¾ä¹î‘¸å¯«åœ¨è£¡é¢ï¼Œåƒæ˜¯env_batchè¨ˆç®—é‚£äº›jobæ˜¯activeçš„å°±åœ¨æ­¤æª”æ¡ˆä¸­æ’°å¯«ã€‚
+    ¨ä¥Lcode·|¥Î¨ìªºFunction´X¥Gm¼g¦b¸Ì­±¡A¹³¬Oenv_batch­pºâ¨º¨Çjob¬Oactiveªº´N¦b¦¹ÀÉ®×¤¤¼¶¼g¡C
 
-``plot.py`` - ç•«çµæœçš„åœ–code
+``plot.py`` - µeµ²ªGªº¹Ïcode
 
-    main_batchè·‘å®Œçš„çµæœå°‡æœƒç”±plotçš„functionç•«æˆåœ–ä¸¦å‘ˆç¾ï¼Œæ‰€ä»¥è¦æ›´æ”¹åœ–çš„ç•«åœ¨æ­¤codeä¿®æ”¹
+    main_batch¶]§¹ªºµ²ªG±N·|¥Ñplotªºfunctionµe¦¨¹Ï¨Ã§e²{¡A©Ò¥H­n§ó§ï¹Ïªºµe¦b¦¹code­×§ï
 
-``main_single`` - è·‘åªè¢«1å€‹instance optimize
+``main_single`` - ¶]¥u³Q1­Óinstance optimize
 
-    èˆ‡main_batchå¹¾ä¹ç›¸åŒï¼Œåªåœ¨è¨“ç·´éšæ®µçµ¦äºˆçš„instanceä¸åŒ
+    »Pmain_batch´X¥G¬Û¦P¡A¥u¦b°V½m¶¥¬qµ¹¤©ªºinstance¤£¦P
 
-``main_batch`` - è·‘è¢«å¤šå€‹instance optimize
+``main_batch`` - ¶]³Q¦h­Óinstance optimize
 
-    æ­¤ç‚ºåŸ·è¡Œæ­¤åˆ†codeçš„mainæª”ï¼Œä¸»è¦åƒæ•¸ä¹Ÿæ˜¯åœ¨æ­¤æª”æ¡ˆä¸­è¨­å®šï¼Œ62è¡Œæ›´æ”¹scaleçš„å¤§å°ï¼Œ47è¡Œ###Parameter settingä¹Ÿæ˜¯å¯ä»¥èª¿æ•´çš„åƒæ•¸ã€‚å¦å¤–203è¡Œæ˜¯ç”¨ä¾†ç•«å‹•ä½œåˆ†å¸ƒåœ–çš„codeï¼Œéœ€è¦æ ¹æ“šepochå¤§å°åšä¿®æ”¹ï¼Œå‘ˆç¾çš„çµæœæ‰æœƒæ¯”è¼ƒç›´è§€ã€‚
+    ¦¹¬°°õ¦æ¦¹¤ÀcodeªºmainÀÉ¡A¥D­n°Ñ¼Æ¤]¬O¦b¦¹ÀÉ®×¤¤³]©w¡A62¦æ§ó§ïscaleªº¤j¤p¡A47¦æ###Parameter setting¤]¬O¥i¥H½Õ¾ãªº°Ñ¼Æ¡C¥t¥~203¦æ¬O¥Î¨Óµe°Ê§@¤À¥¬¹Ïªºcode¡A»İ­n®Ú¾Úepoch¤j¤p°µ­×§ï¡A§e²{ªºµ²ªG¤~·|¤ñ¸ûª½Æ[¡C
 
-``generate.py`` - ç”¢ç”Ÿinstanceçš„code
+``generate.py`` - ²£¥Íinstanceªºcode
 
-    æ­¤ä»½codeç‚ºç”¢ç”Ÿä¸åŒscaleå¤§å°çš„instancesçš„code
+    ¦¹¥÷code¬°²£¥Í¤£¦Pscale¤j¤pªºinstancesªºcode
 
 
 ## Folder
 
-``Cplex`` - è·‘MIPèˆ‡GAçš„codeï¼Œè£¡é¢çš„GA.pyåŸ·è¡Œ
+``Cplex`` - ¶]MIP»PGAªºcode¡A¸Ì­±ªºGA.py°õ¦æ
 
-``parameter`` - main_singleèˆ‡main_batchç¶²è·¯åƒæ•¸å„²å­˜ä½ç½®
+``parameter`` - main_single»Pmain_batchºô¸ô°Ñ¼ÆÀx¦s¦ì¸m
 
-``figure`` - main_singleèˆ‡main_batchçµæœåœ–å„²å­˜ä½ç½®
+``figure`` - main_single»Pmain_batchµ²ªG¹ÏÀx¦s¦ì¸m
 
-``instance`` - å„²å­˜instanceçš„è³‡æ–™å¤¾
+``instance`` - Àx¦sinstanceªº¸ê®Æ§¨
 
-``optimal`` - ç”¨OR-toolsè·‘optimal çš„codeï¼Œä½†ç”¨Cplexå°±å¥½
+``optimal`` - ¥ÎOR-tools¶]optimal ªºcode¡A¦ı¥ÎCplex´N¦n
 
-``good_parameter`` - è«–æ–‡å¯¦é©—çµæœçš„åœ–ã€åƒæ•¸èˆ‡çµæœï¼Œåˆ†ä¸åŒsize
+``good_parameter`` - ½×¤å¹êÅçµ²ªGªº¹Ï¡B°Ñ¼Æ»Pµ²ªG¡A¤À¤£¦Psize
