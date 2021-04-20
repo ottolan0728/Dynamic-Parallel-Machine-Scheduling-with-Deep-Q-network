@@ -28,7 +28,7 @@
 
 ``main_batch`` - Optimized by multiple instances
 
-    This is the main file for executing this code. The main parameters are also set in this file, such as the ones which change the sizes of the instances in line 62 and ###Parameter setting### which are also adjustable parameters in line 47. The other line 203 is the code used to draw the action distribution graph, which needs to be modified according to the epoch size, so that the presented results will be more intuitive.
+    This is the main file for executing this code. The main parameters are also set in this file, such as ###Parameter setting### which are adjustable parameters in line 47, and the ones which change the sizes of the instances in line 62. The other one is the code used to draw the graphs of the action distribution in line 203, which needs to be modified according to the epoch size so that the results will be more intuitive.
 
 ``generate.py`` - The code for generating the instances
 
