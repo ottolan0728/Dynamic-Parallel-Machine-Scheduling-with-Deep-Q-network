@@ -12,7 +12,7 @@
 
 ``DQN.py`` - The code of DQN optimization | <strong> Agent Optimization </strong>
 
-    This file is to optimize DQN agents. After the agent interacts with an instance (finished assigning all jobs), the optimization of the agent is executed in this file. The parameters to be adjusted are the parameters in ``early stopping'', and 134 The number of steps in the row, that is, how many epochs to update the target
+    This file is to optimize DQN agents. After the agent interacts with an instance (finished assigning all jobs), the optimization of the agent is executed in this file. The parameters that need to be adjusted are the ones in "early stopping" and the number of steps in line 134, which represents how many epochs to update Target network.
 
 ``util.py`` - The code of other functions
 
