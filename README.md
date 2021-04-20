@@ -16,7 +16,7 @@
 
 ``util.py`` - The code of other functions
 
-    All the functions used by other codes are written in this file. For example, ``env_batch`` calculates which jobs that are active, and is encoded in this file.
+    All the functions used by other codes are written in this file. For example, ``env_batch.py`` calculates which jobs that are active, and is encoded in this file.
 
 ``plot.py`` - 畫結果的圖code
 
